@@ -37,4 +37,5 @@ From here we need to install grub and the efi boot manager by running "pacman -S
 We then also need to install the grub bootloader to the EFI partition by running "grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB"
 We then need to generate the grub configuration file by running "grub-mkconfig -o /boot/grub/grub.cfg"
 We have then completed the Arch linux installation, and then need to exit by running "exit" and then unmount the system by running "unmount -R /mnt" and then reboot the system by running "reboot"
-After this, we'll need to sign in using the root password we set up earlier, and then run "
+After this, we'll need to sign in using the root password we set up earlier, and then run "pacman -S gnome" to install the graphical interface, go through and set each to default and type "Y" when prompted. 
+After gnome has been installed, run "gnome-shell --wayland" to enter into the GUI interface. 
