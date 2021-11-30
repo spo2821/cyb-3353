@@ -19,3 +19,10 @@ And then I had to give executable permissions to the docker-compose file by runn
 Next I was able to test the docker-compose was working by running "docker-compose --version" which printed out the version I installed to ensure that the command worked. 
 
 I then was able to test that docker was working by running a new container with "sudo docker run hello-world" and indavertently would set myself back in the future as this container along with another one I tested pulled too many resources and would have to be deleted later. 
+
+From here we need to pull the correct docker image so that we can set up a new container, and we do this by running "sudo docker pull ubuntu", and we can check to make sure it's installed by running "sudo docker images" and checking from there. We can then run it by running "sudo docker run -it ubuntu" and check to make sure it's running by running the command "sudo docker ps -a", and "sudo docker ps -l".
+
+From here, we kind of have docker set up, and now we will need to continue into the OpenVAS installation, this is where I ran into an issue with a container I set up in my installation here to test docker, and the hello-world container, and I had to remove them using the command "sudo docker rm hello-world".
+
+From here we need to create the container for openvas, and we can do this by running the command "sudo docker run -d -p 433:433 --name openvas mikesplain/openvas # 9"
+
