@@ -24,5 +24,11 @@ From here we need to pull the correct docker image so that we can set up a new c
 
 From here, we kind of have docker set up, and now we will need to continue into the OpenVAS installation, this is where I ran into an issue with a container I set up in my installation here to test docker, and the hello-world container, and I had to remove them using the command "sudo docker rm hello-world".
 
-From here we need to create the container for openvas, and we can do this by running the command "sudo docker run -d -p 433:433 --name openvas mikesplain/openvas # 9"
+From here we need to create the container for openvas, and we can do this by running the command "sudo docker run -d -p 433:433 --name openvas mikesplain/openvas"
+
+Now we can actually oepn openvas, and to do this we need to go to a web browser and type in "https://localhost:433", and then log into the web page using "admin" as the username and the password. The dashboard should look like this image when the log in is complete. <img width="1123" alt="Screen Shot 2021-12-02 at 10 58 41 PM" src="https://user-images.githubusercontent.com/19178865/144547843-28701615-c0b4-403d-99ca-67901718dbae.png">
+
+After you log in, you have to run a scan by clicking on the Scans menu and then clicking on Tasks, from this page, you will need to click on the purple icon and select Task Wizard, and then click "Start Scan", after this step has occured, you should see a scan start at the bottom that looks like the following image. 
+ 
+ <img width="952" alt="Screen Shot 2021-12-02 at 10 56 16 PM" src="https://user-images.githubusercontent.com/19178865/144547768-1e6718a6-a2b5-457d-a3d2-8cea0bdc4da2.png">
 
