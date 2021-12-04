@@ -90,13 +90,16 @@ services:
       - net.ipv4.conf.all.src_valid_mark=1
 ```
 From here, our wireguard is just about ready to run, all we need to do is jump into the directory, start the container, and check the logs for the vpn so that we can get the qr codes to run our vpn in the app, to do all of this, we run the three following commands. After that, we can open up the app and we should be good to run. 
-```cd ~/wireguard/
+```
+cd ~/wireguard/
 docker-compose up -d
-docker-compose logs -f wireguard```
+docker-compose logs -f wireguard
+```
 
-Following this, we need to open up wireguard in our app, 
+Following this, we need to open up wireguard in our laptop, and to do that, we download the app, and open an empty tunnel from the GUI, from there, we insert the following code block so that we can direct the vpn where to tunnel. After we are finished, it should look like the following photo. 
 
-```[Interface]
+```
+[Interface]
 Address = 10.0.0.3
 PrivateKey = yI/XtR0EO8xyjWTN5y2lVbt86EfrjQXhx96O8jjd7XU=
 ListenPort = 51820
@@ -105,7 +108,8 @@ DNS = 10.0.0.1
 [Peer]
 PublicKey = MR6Jdp2Ddx290m405v/nUIZJBPlX5r64wNLayWmTSDE=
 Endpoint = 143.198.183.61:51820
-AllowedIPs = 0.0.0.0/0, ::/0```
+AllowedIPs = 0.0.0.0/0, ::/0
+```
 
 
 
