@@ -32,3 +32,7 @@ After you log in, you have to run a scan by clicking on the Scans menu and then 
  
  <img width="952" alt="Screen Shot 2021-12-02 at 10 56 16 PM" src="https://user-images.githubusercontent.com/19178865/144547768-1e6718a6-a2b5-457d-a3d2-8cea0bdc4da2.png">
 
+<h1>Sources Used </h1>
+
+https://docs.docker.com/compose/install/
+https://github.com/mikesplain/openvas-docker
