@@ -95,7 +95,7 @@ cd ~/wireguard/
 docker-compose up -d
 docker-compose logs -f wireguard
 ```
-
+<h1> Wireguard Laptop Setup</h1>
 Following this, we need to open up wireguard in our laptop, and to do that, we download the app, and open an empty tunnel from the GUI, from there, we insert the following code block so that we can direct the vpn where to tunnel. After we are finished, it should look like the following photo. 
 
 ```
