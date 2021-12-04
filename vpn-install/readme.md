@@ -67,5 +67,6 @@ Endpoint = 143.198.183.61:51820
 AllowedIPs = 0.0.0.0/0, ::/0"
 
 
-![download](https://user-images.githubusercontent.com/19178865/144699324-e97ecbb1-12b4-47e7-b2bd-6a5a868f159d.png)
+
+<img width="1440" alt="Screen Shot 2021-12-03 at 11 33 55 PM" src="https://user-images.githubusercontent.com/19178865/144699354-269fa696-c183-44fc-838e-536384e4aa89.png">
 
