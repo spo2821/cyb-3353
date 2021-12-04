@@ -7,6 +7,7 @@ From here, we have to go in, and create a new ubuntu droplet for $5/month to set
 <h1> Docker Installation </h1>
 
 Continuing, we have to first install the certificates and dependencies required to install docker, that is done with the following command.
+
 ```
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 ```
