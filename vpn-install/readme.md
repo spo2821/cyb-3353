@@ -54,3 +54,18 @@ services:
 docker-compose up -d"
 
 "docker-compose logs -f wireguard"
+
+"[Interface]
+Address = 10.0.0.3
+PrivateKey = yI/XtR0EO8xyjWTN5y2lVbt86EfrjQXhx96O8jjd7XU=
+ListenPort = 51820
+DNS = 10.0.0.1
+
+[Peer]
+PublicKey = MR6Jdp2Ddx290m405v/nUIZJBPlX5r64wNLayWmTSDE=
+Endpoint = 143.198.183.61:51820
+AllowedIPs = 0.0.0.0/0, ::/0"
+
+
+![download](https://user-images.githubusercontent.com/19178865/144699324-e97ecbb1-12b4-47e7-b2bd-6a5a868f159d.png)
+
