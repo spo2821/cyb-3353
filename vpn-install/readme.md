@@ -41,7 +41,7 @@ mkdir -p ~/wireguard/config/
 nano ~/wireguard/docker-compose.yml " 
 
 Once we are in the nano version of the docker-compose.yml, we need to copy and past the following code into the yml, such that we can have the correct timezone and IP for the server, which will allow us to run our vpn. 
-'''
+```
 "version: '3.8'
 services:
   wireguard:
@@ -71,7 +71,7 @@ services:
       - SYS_MODULE
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1"
-'''   
+```
 From here, our wireguard is just about ready to run, all we need to do is jump into the directory, start the container, and check the logs for the vpn so that we can get the qr codes to run our vpn in the app, to do all of this, we run the three following commands. After that, we can open up the app and we should be good to run. 
 "cd ~/wireguard/
 docker-compose up -d
