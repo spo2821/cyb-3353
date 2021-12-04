@@ -6,17 +6,22 @@ From here, we have to go in, and create a new ubuntu droplet for $5/month to set
 
 <h1> Docker Installation </h1>
 
+Continuing, we have to first install the certificates and dependencies required to install docker, that is done with the following command.
 "sudo apt install apt-transport-https ca-certificates curl software-properties-common -y"
 
+Next we have to run this command to pull the docker ubuntu install from docker. 
 "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -"
 
+Next, we have to add a repository for docker, which requires running the following command.
 "sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable" " 
    
+After the repository is installed, we have to switch into the repo so that we can continue the installation.
 "apt-cache policy docker-ce"
 
+Next, we have to actually install docker through apt by running the following command. 
 "sudo apt install docker-ce -y"
 
 "sudo usermod -aG docker ${USER}"
