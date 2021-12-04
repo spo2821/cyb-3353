@@ -24,15 +24,24 @@ After the repository is installed, we have to switch into the repo so that we ca
 Next, we have to actually install docker through apt by running the following command. 
 "sudo apt install docker-ce -y"
 
+Next, we need to ensure that we can run docker without having to run the sudo command each time we try to run a command, we do that by running the following.
 "sudo usermod -aG docker ${USER}"
 
+Next, we have to install the compose for docker, which will allow us to run most of the commands for the wireguard vpn.
 "sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose"
 
+Finally, we have to ensure that the docker-compose is executable and we do that by running the following. 
 "sudo chmod +x /usr/local/bin/docker-compose"
 
+<h1> Wireguard Installation</h1>
+
+Next we need to move into actually installing wireguard, and to do that we have to set up the directories for the wireguard and for the config, as well as getting into the docker-compose.yml for the files, and to do that we have to run the three following commands. 
 "mkdir -p ~/wireguard/
 mkdir -p ~/wireguard/config/
 nano ~/wireguard/docker-compose.yml " 
+
+Once we are in the nano version of the docker-compose.yml, we need to copy and past the following code into the yml, such that we can have the correct timezone and IP for the server, which will allow us to run our vpn. 
+'''
 "version: '3.8'
 services:
   wireguard:
@@ -62,11 +71,13 @@ services:
       - SYS_MODULE
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1"
-      
+'''   
+From here, our wireguard is just about ready to run, all we need to do is jump into the directory, start the container, and check the logs for the vpn so that we can get the qr codes to run our vpn in the app, to do all of this, we run the three following commands. After that, we can open up the app and we should be good to run. 
 "cd ~/wireguard/
-docker-compose up -d"
+docker-compose up -d
+docker-compose logs -f wireguard"
 
-"docker-compose logs -f wireguard"
+Following this, we need to open up wireguard in our app, 
 
 "[Interface]
 Address = 10.0.0.3
