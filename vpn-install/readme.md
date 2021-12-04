@@ -1,3 +1,11 @@
+<h1>Digital Ocean Set Up</h1>
+
+To start this lab, we had to go to the site Digital Ocean to set up an account that we can then access $100 in credits to utilize for this lab. We start by using the referral code from this link : https://m.do.co/c/4d7f4ff9cfe4 which grants us the $100 credit.
+
+From here, we have to go in, and create a new ubuntu droplet for $5/month to set up the vpn server on. Next we will install docker and the vpn software.
+
+<h1> Docker Installation </h1>
+
 "sudo apt install apt-transport-https ca-certificates curl software-properties-common -y"
 
 "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -"
