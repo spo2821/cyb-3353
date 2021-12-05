@@ -90,3 +90,7 @@ From here you just need to enable the autobooter, for this I used the GDM displa
 
 <h2>Troubleshooting </h2>
 Some problems I ran into while setting up the system was ensuring that everything was done in the right order, as doing a step wrong could cause the machine not to work, so I had to carefully follow the wiki guide to ensure everything was correctly done. Additionally, I had an issue with the first Display Manager I installed which caused the VM to load in a loop and not allow you to log into the system whenver you tried to get in. To fix this, I had to disable and stop that display manager and switch over to the GDM service. 
+
+<h2>Video Walkthrough</h2>
+<a>https://www.youtube.com/watch?v=PlLQglYRpJE </a>
+
