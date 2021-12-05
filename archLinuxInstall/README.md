@@ -1,13 +1,25 @@
-  To Start the install for Arch Linux, we first needed to install an ISO that we could base our VM off of. To do that I downloaded from http://mirror.arizona.edu/archlinux/iso/2021.10.01/
+<h1>Arch Linux Installation</h1>
+
+To Start the install for Arch Linux, we first needed to install an ISO that we could base our VM off of. To do that I downloaded from <a>http://mirror.arizona.edu/archlinux/iso/2021.10.01/</a>
+
 After you install the ISO from the University of Arizona website, you then need to create the VM on VMWare fusion. 
+
 For this step, you have to go into File > New then click "Install from disc or image" and then continue.
+
 From here, I clicked "Use another disc or disc image" and found the iso install file and then clicked continue.
+
 On the configuration page, you are going to click Linux then scroll until you reach "Other Linux 5.x and later kernel 64-bit", and then click on this and continue. 
+
 On the next configuration page, select UEFI
+
 Finally, on the Summary page, click "Customize Settings", go through to Hard disk, and set it to 20 GB instead of 8 GB, then go to  processors and Memory, and set memory up to 2048 MB instead of 768 MB. 
+
 Select confirm and then go to the "Arch Linux install medium (x86_64, UEFI).
+
 First step is to verify the installation is in UEFI mode, by running ls /sys/firware/efi/efivars
+
 From here, youll want to check the network configuration by pinging a website from the terminal using "ping-c 4 www.google.com"
+
 Then youll need to update the system clock using "timedatect! set-ntp true"
 From here you check the partitions on the disk by running "lsblk"
 From here youll need to partition the disk for the install by running "cfdisk /dev/sda" and then going through the ui and setting up new partitions. 
