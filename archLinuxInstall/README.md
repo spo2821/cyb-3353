@@ -88,4 +88,5 @@ After gnome has been installed, run "gnome-shell --wayland" to enter into the GU
 
 From here you just need to enable the autobooter, for this I used the GDM display manager, to enable this you just need to run "systemctl start gdm.service", and "systemctl enable gdm.service", and this should boot into gnome as soon as you start your virtual machine.
 
+<h2>Troubleshooting </h2>
 Some problems I ran into while setting up the system was ensuring that everything was done in the right order, as doing a step wrong could cause the machine not to work, so I had to carefully follow the wiki guide to ensure everything was correctly done. Additionally, I had an issue with the first Display Manager I installed which caused the VM to load in a loop and not allow you to log into the system whenver you tried to get in. To fix this, I had to disable and stop that display manager and switch over to the GDM service. 
